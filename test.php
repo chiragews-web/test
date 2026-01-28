@@ -7,7 +7,7 @@ function custom_curleejo_forgot_password_form()
 
 	?>
 
-	<form id="curleejo-forgot-password-form">
+	<form id="curleejo-forgot-password-form 12">
 
 		<div class="form_content">
 

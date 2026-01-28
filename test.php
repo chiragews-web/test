@@ -1,7 +1,4 @@
 <?php
-
-
-
 function custom_curleejo_forgot_password_form()
 
 {

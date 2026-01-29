@@ -1,13 +1,12 @@
 <?php
 function custom_curleejo_forgot_password_form()
-
 {
 
 	ob_start();
 
 	?>
 
-	<form id="curleejo-forgot-password-form 12">
+	<form id="curleejo-forgot-password-form">
 
 		<div class="form_content">
 
@@ -34,7 +33,6 @@ function custom_curleejo_forgot_password_form()
 			<button type="submit">Confirm</button>
 
 			<img id="loader" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/loader.gif'; ?>" alt="Loader"
-
 				style="display:none;">
 
 		</div>
@@ -138,7 +136,6 @@ add_shortcode('curleejo_forgot_password', 'custom_curleejo_forgot_password_form'
 
 
 function curleejo_forgot_password_ajax_handler()
-
 {
 
 	if (empty($_POST['email'])) {
@@ -160,7 +157,7 @@ function curleejo_forgot_password_ajax_handler()
 	}
 
 
-	
+
 
 
 	$user = get_user_by('email', $email);
@@ -340,7 +337,6 @@ add_action('wp_ajax_nopriv_curleejo_forgot_password', 'curleejo_forgot_password_
 
 
 function custom_curleejo_reset_password_form()
-
 {
 
 	if (!isset($_GET['key']) || !isset($_GET['user_id'])) {
@@ -424,9 +420,7 @@ function custom_curleejo_reset_password_form()
 		<div class="from-group">
 
 			<button type="submit">Reset Password <img id="loader"
-
 					src="<?php echo get_stylesheet_directory_uri() . '/assets/images/loader.gif'; ?>" alt="Loader"
-
 					style="display:none;"></button>
 
 		</div>
@@ -562,7 +556,6 @@ add_shortcode('curleejo_reset_password', 'custom_curleejo_reset_password_form');
 
 
 function curleejo_reset_password_ajax_handler()
-
 {
 
 	if (!isset($_POST['key']) || !isset($_POST['user_id']) || empty($_POST['new_password']) || empty($_POST['confirm_password'])) {
